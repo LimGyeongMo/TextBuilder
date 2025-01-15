@@ -21,7 +21,6 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val view: TextView = findViewById()
 
         TextBuilder.builder()
             .setDefaultAttribute(
@@ -36,14 +35,11 @@ class MainActivity : AppCompatActivity() {
                 TextStyle.builder()
                     .textSize(22)
 //                    .font(this, R.font.dddddd)
-                    .setClickListener(view, onClickListener = {
-                        Log.d("dsadas", "dsadsadas")
-                    })
             )
             .newLine()
             .text("vvvvvv",
                 TextStyle.builder()
-                    .link(view, "naver.com")
+
             )
     }
 }
