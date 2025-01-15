@@ -18,6 +18,9 @@ object TextBuilder {
     private var defaultTextStyle: TextStyle? = null
     private var alignmentSpan: Any? = null
 
+    @JvmStatic
+    fun builder(): TextBuilder = this
+
     private data class TextSection(val text: String, val attributes: List<Any>?)
 
     fun setDefaultAttribute(textStyle: TextStyle?): TextBuilder = apply {
@@ -70,6 +73,4 @@ object TextBuilder {
     val ALIGN_CENTER: Any = AlignmentSpan.Standard(Layout.Alignment.ALIGN_CENTER)
     val ALIGN_OPPOSITE: Any = AlignmentSpan.Standard(Layout.Alignment.ALIGN_OPPOSITE)
     val ALIGN_NORMAL: Any = AlignmentSpan.Standard(Layout.Alignment.ALIGN_NORMAL)
-
-    fun builder(): TextBuilder = this
 }
