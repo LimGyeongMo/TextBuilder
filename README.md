@@ -11,6 +11,18 @@ The **TextBuilder** library simplifies the creation and styling of rich text for
 ## Getting Started
 
 ### Adding TextBuilder to Your Project
+Add the JitPack repository to your build file
+Add it in your root build.gradle at the end of repositories:
+```kotlin
+	dependencyResolutionManagement {
+		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+		repositories {
+			mavenCentral()
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+Add the dependency
 ```kotlin
 dependencies {
    implementation 'com.github.LimGyeongMo:TextBuilder:Version'
