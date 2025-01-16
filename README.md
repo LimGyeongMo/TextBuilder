@@ -12,7 +12,9 @@ The **TextBuilder** library simplifies the creation and styling of rich text for
 
 ### Adding TextBuilder to Your Project
 
-Include the library in your project. (Add specific dependency instructions here, if applicable.)
+dependencies {
+   implementation 'com.github.LimGyeongMo:TextBuilder:Tag'
+}
 
 ### Basic Usage
 
@@ -86,10 +88,6 @@ Defines styles for individual text segments.
 - `TextStyle.ALIGN_RIGHT`
 - `TextStyle.ALIGN_LEFT`
 
-### Custom Spans
-
-For advanced customization, create custom spans such as `CustomUnderlineSpan` or `CustomTypefaceSpan`.
-
 ## Example Use Case
 
 ```kotlin
@@ -110,16 +108,20 @@ TextBuilder.builder()
     .newLine()  
     .text("- Custom styling options", TextStyle.builder().textColor(Color.BLUE))
      .newLine()  
-    .text("- Clickable text", TextStyle.builder().underline().setClickListener(textView, View.OnClickListener {
+    .text("- Clickable text",
+        TextStyle.builder()
+            .underline()
+            .setClickListener(textView, View.OnClickListener {
         Toast.makeText(context, "You clicked!", Toast.LENGTH_SHORT).show()
-    }))
+            })
+    )
     .build()
 ```
 
 ## Notes
 
 - Ensure proper context and resource management when using fonts, colors, and click listeners.
-- Use `LinkMovementMethod` on `TextView` for clickable spans to function correctly.
+- Inject LinkMovementMethod into the TextView to ensure clickable spans work correctly.
 
 ## License
 
