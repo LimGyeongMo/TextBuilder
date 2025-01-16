@@ -11,11 +11,11 @@ The **TextBuilder** library simplifies the creation and styling of rich text for
 ## Getting Started
 
 ### Adding TextBuilder to Your Project
-
+```kotlin
 dependencies {
-   implementation 'com.github.LimGyeongMo:TextBuilder:Tag'
+   implementation 'com.github.LimGyeongMo:TextBuilder:Version'
 }
-
+```
 ### Basic Usage
 
 Here is an example of how to use `TextBuilder` to create a styled text block:
